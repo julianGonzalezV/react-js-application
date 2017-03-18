@@ -11,7 +11,7 @@ class PersonAvatar extends Component{
       return (
       <figure className="media-left">
           {/*<img src={'./images/images.png'}/>*/}
-        <img className="media-object" width="64px" src={`./images/${this.props.picture}`}/>
+        <img className="media-object" width="64px" src={`./images/${this.props.age}.png`}/>
       </figure>
     );
   }

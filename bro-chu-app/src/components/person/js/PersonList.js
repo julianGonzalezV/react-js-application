@@ -8,11 +8,9 @@ class PersonList extends Component {
      <ul className="media-list">
        {
          this.props.list.map((person) => {
-           return <PersonRow key={ person.id }
-                               name={ person.fullName }
-                               picture={ person.pic }
-                               title={ person.title }
-                               department={ person.department } />
+           return <PersonRow id={ person.id }
+                               name={ person.name }
+                               age={ person.age } />
          })
        }
      </ul>

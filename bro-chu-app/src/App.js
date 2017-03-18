@@ -1,10 +1,13 @@
-import React from 'react';
-import './App.css';
-import PersonList from './components/person/js/PersonList';
-const App = () => {
+import React, { Component } from 'react';
+import NavBar  from './components/nav-bar/NavBar';
 
+class App extends Component {
 
+  constructor(props) {
+    super(props);
+  }
 
+/*
   let persons = [
   { id: 1, fullName: "julian", title: "CEO", department: "Business", pic: "1.jpg" },
   { id: 2, fullName: "paola", title: "CMO", department: "Marketing", pic: "2.jpg" },
@@ -17,12 +20,14 @@ const App = () => {
   { id: 9, fullName: "juanes", title: "DevOps Engineer", department: "Engineering", pic: "1.jpg" },
 
 ]
-
+*/
 //v1.1 USANDO ComponenTE
-return (<div className="App">
-           <PersonList list = { persons }  />
-         </div>
-               );
+
+
+
+  render(){
+    return (<NavBar/>);
+  }
 
 };
 export default App;
