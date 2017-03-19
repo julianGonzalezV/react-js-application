@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes} from 'react';
+import { Link, IndexLink } from 'react-router';
+
+
 import NavItem from './NavItem'
 import './NavBar.css'
 
@@ -63,14 +66,15 @@ class NavBar extends Component{
         <div className="row">
             <div className="col-sm-3 col-md-2 sidebar">
                 <ul className="nav nav-sidebar">
-                  <li className="active"><a href="#">Overview <span className="sr-only">(current)</span></a></li>
-                  <li><a href="#">Reports</a></li>
-                  <li><a href="#">Analytics</a></li>
-                  <li><a href="#">Export</a></li>
+                  {/*<li className="active"><a href="#">Home<span className="sr-only">(current)</span></a></li>*/}
+                  <li><Link to="/Home" activeClassName="active">Home</Link>   </li>
+                  <li> <Link to="/PersonApp"  className="active" >Listado de Personas</Link> </li>
+                  <li><a href="#">Opcion1</a></li>
+                  <li><a href="#">Opcion2</a></li>
                 </ul>
             </div>
             {/* componente tabla para personas */}
-            <PersonApp/>
+            {/*<PersonApp/>*/}
         </div>
     </div>
   </div>

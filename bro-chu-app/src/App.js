@@ -26,7 +26,14 @@ class App extends Component {
 
 
   render(){
-    return (<NavBar/>);
+    return (
+      <div>
+        <NavBar/>
+        {/*Note que si usted no indica que el componente va a ser hijo del
+          componenete actual entonces el route no lo pinta  */}
+        {this.props.children}
+      </div>
+      );
   }
 
 };
