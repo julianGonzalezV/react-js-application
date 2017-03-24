@@ -1,7 +1,9 @@
+
+/*
 import React, { Component } from 'react';
-import PersonTableRow from './PersonTableRow'
-import PersonTableHeader from './PersonTableHeader'
+
 class PersonTable extends Component {
+
 
   constructor(props) {
     super(props);
@@ -39,9 +41,8 @@ class PersonTable extends Component {
     this.setState({ tableState: nextProps.tableList });
   }
 
-/**
-*Function to filter the table by id
-*/
+
+//Function to filter the table by id
 filterTableById(filterId) {
   this.setState({ filtro1: filterId });
 }
@@ -53,8 +54,6 @@ filterTableById(filterId) {
 		  <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h3 className="sub-header">Listado de Personas</h3>
                  <div className="table-responsive">
-                 {/* Note la manera en que se le pasan  propiedades adicionales del componente
-                   que lo llama, para que tenga acceso a este recurso, en este caso una funcion */}
                    <table className="table table-striped">
                      <PersonTableHeader  filterTableById={this.filterTableById}/>
                      <tbody>
@@ -65,5 +64,44 @@ filterTableById(filterId) {
               </div>
       );
   }
+
+
+
 }
 export default PersonTable
+*/
+
+
+
+import React, {PropTypes} from 'react';
+import PersonTableRow from './PersonTableRow'
+import PersonTableHeader from './PersonTableHeader'
+
+const PersonTable = ({persons}) => {
+  console.log("DESDE PersonTable ",persons.length );
+  return(
+    <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h3 className="sub-header">Listado de Personas</h3>
+       <div className="table-responsive">
+         <table className="table table-striped">
+           {/*<PersonTableHeader  filterTableById={this.filterTableById}/>*/}
+           <tbody>
+             {
+               persons.map(person => (
+                 <PersonTableRow id={ person.id }
+                                     name={ person.name }
+                                     age={ person.age } />
+                                   ))
+             }
+           </tbody>
+         </table>
+       </div>
+    </div>
+  );
+};
+
+PersonTable.propTypes = {
+  persons: PropTypes.array.isRequired
+};
+
+export default PersonTable;
