@@ -3,7 +3,7 @@ class PersonTableHeader extends Component {
 
 constructor(props) {
   super(props);
-  this.state = { recordId: '' };
+  //this.state = { recordId: '' };
   //aca estamos indicando que cada vez que se encuentre un this dentro de la funcion miFuncion entonces le asocie la
   //clase para que sepa donde buscarlo
   this.filterById = this.filterById.bind(this);
@@ -14,7 +14,7 @@ constructor(props) {
   *
   */
   filterById(event){
-    this.setState({recordId: event.target.value});
+    //this.setState({recordId: event.target.value});
     this.props.filterTableById(event.target.value);
   }
 
@@ -25,7 +25,8 @@ constructor(props) {
         <tr >
           <th>
             <div >
-             <input type="text" className="form-control" ref="filterTextInput" onChange={this.filterById} value = {this.state.recordId} />
+             {<input type="text" className="form-control" ref="filterTextInput" onChange={this.filterById} />}
+             {/*<input type="text" className="form-control" ref="filterTextInput" />*/}
               <h5>Id</h5>
             </div>
           </th>

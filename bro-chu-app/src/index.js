@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import { loadPersons } from './actions/personActions';
 
 const store = storeSetup();
-store.dispatch(loadPersons());
+//store.dispatch(loadPersons());
 {/*
 <Provider store={store}>
  <Router history={browserHistory} routes={routes} />

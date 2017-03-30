@@ -6,4 +6,4 @@ const rootReducer = combineReducers({
   persons
 })
 
-export default rootReducer; 
+export default rootReducer;

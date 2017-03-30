@@ -33,7 +33,6 @@ class PersonContainer extends Component {
   };
 
   function mapStateToProps(state, ownProps) {
-    // state = {persons: [{id:1, name: "Maru"}, etc.]}
     console.log('PersonContainer ::: mapStateToProps',state.persons.length )
     if(state.persons.length > 0){
       return {

@@ -17,3 +17,9 @@ export function loadPersonsSuccess(persons) {
     console.log("PersonAction ENTRA A ::loadPersonsSuccess()")
   return {type: types.LOAD_PERSONS_SUCCESS, persons};
 }
+
+
+export function filterByColumn(persons) {
+    console.log("filtrando por columna")
+  return {type: types.LOAD_PERSONS_SUCCESS, persons};
+}
