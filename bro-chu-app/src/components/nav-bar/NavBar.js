@@ -68,8 +68,8 @@ class NavBar extends Component{
             <div className="col-sm-3 col-md-2 sidebar">
                 <ul className="nav nav-sidebar">
                   {/*<li className="active"><a href="#">Home<span className="sr-only">(current)</span></a></li>*/}
-                  <li ><Link to="/Home" activeClassName="active">Home</Link>   </li>
-                  <li> <Link to="/persons"  activeClassName="active" >Listado de Personas</Link> </li>
+                  <li ><Link to="/admonApp/Home" activeClassName="active">Home</Link>   </li>
+                  <li> <Link to="/admonApp/persons"  activeClassName="active" >Listado de Personas</Link> </li>
                   <li><a href="#">Opcion1</a></li>
                   <li><a href="#">Opcion2</a></li>
                 </ul>
